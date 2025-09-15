@@ -145,62 +145,85 @@
   </div>
 </section>
 
-  <!-- ======= CONTACT ======= -->
-  <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-    <div class="max-w-6xl mx-auto px-6 text-center" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-12">Contact Me</h2>
-      <form class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg max-w-3xl mx-auto space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
-        <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
-        <textarea placeholder="Your Message" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-purple-500 h-32 dark:bg-gray-700 dark:border-gray-600"></textarea>
-        <button type="submit" class="w-full bg-purple-600 text-white p-3 rounded-lg hover:bg-purple-700 transition">Send Message</button>
-      </form>
+<!-- ======= CONTACT ======= -->
+<section id="contact" class="py-20 bg-gradient-to-r from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-center">Contact Me</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Contact Info -->
+      <div class="space-y-6" data-aos="fade-right">
+        <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="font-semibold text-lg mb-2">📧 Email</h3>
+          <p class="text-gray-600 dark:text-gray-400">midojaya@email.com</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="font-semibold text-lg mb-2">💼 LinkedIn</h3>
+          <p class="text-gray-600 dark:text-gray-400">linkedin.com/in/midojaya</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="font-semibold text-lg mb-2">🌐 GitHub</h3>
+          <p class="text-gray-600 dark:text-gray-400">github.com/midojaya</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8" data-aos="fade-left">
+        <form id="contactForm" class="space-y-6">
+          <div>
+            <label class="block text-gray-700 dark:text-gray-300 mb-2">Nama</label>
+            <input type="text" required placeholder="Masukkan nama kamu"
+              class="w-full px-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-purple-500">
+          </div>
+          <div>
+            <label class="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
+            <input type="email" required placeholder="Masukkan email kamu"
+              class="w-full px-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-purple-500">
+          </div>
+          <div>
+            <label class="block text-gray-700 dark:text-gray-300 mb-2">Pesan</label>
+            <textarea rows="4" required placeholder="Tulis pesan kamu di sini..."
+              class="w-full px-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-purple-500"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ======= FOOTER ======= -->
-  <footer class="py-6 bg-white dark:bg-gray-800 text-center text-gray-600 dark:text-gray-400">
-    © 2025 MidoJaya. All Rights Reserved.
-  </footer>
+  <!-- Popup Sukses -->
+  <div id="successPopup" class="fixed inset-0 hidden bg-black/50 flex items-center justify-center z-50">
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 text-center max-w-sm">
+      <h3 class="text-xl font-bold text-green-600 mb-2">✅ Pesan Terkirim!</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">Terima kasih, pesanmu sudah berhasil dikirim.</p>
+      <button type="button" onclick="closePopup()" 
+        class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">Tutup</button>
+    </div>
+  </div>
+</section>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
+<!-- Tambahkan Script AOS & Form -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
 
+  const form = document.getElementById("contactForm");
+  const popup = document.getElementById("successPopup");
 
-    const toggleDark = document.getElementById('toggleDark');
-    toggleDark.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-    });
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // supaya tidak reload
+    popup.classList.remove("hidden");
+  });
 
+  function closePopup() {
+    popup.classList.add("hidden");
+    form.reset(); // reset form setelah sukses
+  }
+</script>
 
-    const text = ["Frontend Developer", "UI/UX Designer", "Creative Coder"];
-    let i = 0, j = 0, current = "", isDeleting = false;
-    function type() {
-      current = text[i];
-      document.getElementById("typing").textContent = current.substring(0, j);
-      if (!isDeleting && j < current.length) {
-        j++; setTimeout(type, 120);
-      } else if (isDeleting && j > 0) {
-        j--; setTimeout(type, 80);
-      } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) i = (i + 1) % text.length;
-        setTimeout(type, 1000);
-      }
-    }
-    type();
-
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add("bg-white", "dark:bg-gray-900");
-      } else {
-        navbar.classList.remove("bg-white", "dark:bg-gray-900");
-      }
-    });
-  </script>
 </body>
 </html>
 
