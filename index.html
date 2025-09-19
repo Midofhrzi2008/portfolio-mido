@@ -6,12 +6,10 @@
   <title>MidoJaya Portfolio</title>
   <link href="src/style.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
 
-  <!-- ======= NAVBAR ======= -->
   <header id="navbar" class="fixed top-0 left-0 w-full bg-white/40 dark:bg-gray-800/40 backdrop-blur-md shadow-md z-50 transition-colors duration-300">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
       <a href="#home" class="text-xl font-bold">MidoJaya</a>
@@ -21,123 +19,61 @@
         <a href="#projects" class="hover:text-purple-600 transition">Projects</a>
         <a href="#contact" class="hover:text-purple-600 transition">Contact</a>
       </nav>
-      <!-- Dark Mode Toggle -->
       <button id="toggleDark" class="ml-4 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition">🌙</button>
     </div>
   </header>
 
-  <!-- ======= HERO ======= -->
   <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center p-6 bg-gradient-to-br from-purple-200 via-blue-100 to-pink-100 dark:from-gray-800 dark:via-gray-900 dark:to-black">
-    <img src="/public/images/mido4.jpg" alt="Profile" 
+    <img src="images/mido4.jpg" alt="Profile" 
          class="w-36 h-36 rounded-full shadow-2xl mb-6 transform transition duration-700 hover:scale-105">
     <h1 class="text-5xl md:text-6xl font-extrabold mb-3" data-aos="fade-up">MidoJaya Jaya</h1>
     <p class="text-gray-700 dark:text-gray-300 text-lg md:text-xl mb-4" data-aos="fade-up" data-aos-delay="200">
       <span id="typing"></span>
     </p>
-    <a href="#projects" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">See My Work</a>
   </section>
 
- <!-- ======= ABOUT ======= -->
-<section id="about" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
-  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-    <!-- Teks & Deskripsi -->
-    <div class="space-y-6" data-aos="fade-right">
-      <h2 class="text-4xl font-bold">About Me</h2>
-      <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-        Saya seorang Frontend Developer dan Designer yang fokus membuat website modern, responsif, dan user-friendly. 
-        Saya menyukai desain clean dengan pengalaman pengguna yang optimal.
-      </p>
-
-      <!-- Skill / Highlight -->
-      <div class="grid grid-cols-2 gap-4 mt-4">
-        <!-- Card 1 -->
-        <div class="bg-purple-50 dark:bg-purple-900/40 p-4 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
-          <h3 class="font-semibold text-purple-700 dark:text-purple-300">Frontend Development</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm">React, Tailwind, HTML, CSS, JS</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="bg-blue-50 dark:bg-blue-900/40 p-4 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
-          <h3 class="font-semibold text-blue-700 dark:text-blue-300">UI/UX Design</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm">Figma, Adobe XD, Prototyping</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="bg-pink-50 dark:bg-pink-900/40 p-4 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
-          <h3 class="font-semibold text-pink-600 dark:text-pink-300">Responsive Design</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm">Mobile & Desktop Friendly</p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="bg-green-50 dark:bg-green-900/40 p-4 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
-          <h3 class="font-semibold text-green-700 dark:text-green-300">Team Collaboration</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm">Agile, Git, Version Control</p>
-        </div>
+  <section id="about" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Teks & Deskripsi -->
+      <div class="space-y-6" data-aos="fade-right">
+        <h2 class="text-4xl font-bold">About Me</h2>
+        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+          Saya seorang Frontend Developer dan Designer yang fokus membuat website modern, responsif, dan user-friendly. 
+          Saya menyukai desain clean dengan pengalaman pengguna yang optimal.
+        </p>
+      </div>
+      <div class="flex justify-center md:justify-end" data-aos="fade-left">
+        <img src="images/mido1.jpg" alt="About Illustration" class="w-80 md:w-96 rounded-xl shadow-lg">
       </div>
     </div>
+  </section>
 
-    <!-- Gambar / Ilustrasi -->
-    <div class="flex justify-center md:justify-end" data-aos="fade-left">
-      <img src="/public/images/mido1.jpg" alt="About Illustration" 
-           class="w-80 md:w-96 rounded-xl shadow-lg">
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ======= PROJECTS ======= -->
 <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-4xl font-bold mb-12 text-center" data-aos="fade-up">Projects</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
 
-      <!-- Project Card 1 -->
       <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden group hover:-translate-y-2 transform transition" data-aos="zoom-in">
-        <img src="/public/images/mido3.jpg" alt="Project 1" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-          <a href="#" class="bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700">See Project</a>
-        </div>
+        <img src="images/mido3.jpg" alt="Project 1" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="p-6">
           <h3 class="font-semibold text-2xl mb-3">Project One</h3>
-          <p class="text-gray-600 dark:text-gray-300">Deskripsi singkat project yang menarik dan relevan.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">React</span>
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
-          </div>
+          <p class="text-gray-600 dark:text-gray-300">Deskripsi singkat project pertama yang menarik dan relevan.</p>
         </div>
       </div>
 
-      <!-- Project Card 2 -->
       <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden group hover:-translate-y-2 transform transition" data-aos="zoom-in">
-        <img src="/public/images/mido2.jpg" alt="Project 2" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-          <a href="#" class="bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700">See Project</a>
-        </div>
+        <img src="images/mido2.jpg" alt="Project 2" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="p-6">
           <h3 class="font-semibold text-2xl mb-3">Project Two</h3>
           <p class="text-gray-600 dark:text-gray-300">Project kedua dengan UI/UX modern dan interaktif.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Tailwind</span>
-            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Responsive</span>
-          </div>
         </div>
       </div>
 
-      <!-- Project Card 3 -->
       <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden group hover:-translate-y-2 transform transition" data-aos="zoom-in">
-        <img src="/public/images/mido3.jpg" alt="Project 3" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-          <a href="#" class="bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700">See Project</a>
-        </div>
+        <img src="images/mido5.jpg" alt="Project 3" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="p-6">
           <h3 class="font-semibold text-2xl mb-3">Project Three</h3>
-          <p class="text-gray-600 dark:text-gray-300">Project ketiga, fokus pada desain UI/UX atau web app interaktif.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Figma</span>
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Prototype</span>
-          </div>
+          <p class="text-gray-600 dark:text-gray-300">Project ketiga yang menampilkan fitur baru dengan desain clean.</p>
         </div>
       </div>
 
@@ -145,84 +81,34 @@
   </div>
 </section>
 
-<!-- ======= CONTACT ======= -->
-<section id="contact" class="py-20 bg-gradient-to-r from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-12 text-center">Contact Me</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <!-- Contact Info -->
-      <div class="space-y-6" data-aos="fade-right">
-        <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg mb-2">📧 Email</h3>
-          <p class="text-gray-600 dark:text-gray-400">midojaya@email.com</p>
-        </div>
-        <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg mb-2">💼 LinkedIn</h3>
-          <p class="text-gray-600 dark:text-gray-400">linkedin.com/in/midojaya</p>
-        </div>
-        <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg mb-2">🌐 GitHub</h3>
-          <p class="text-gray-600 dark:text-gray-400">github.com/midojaya</p>
-        </div>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8" data-aos="fade-left">
-        <form id="contactForm" class="space-y-6">
-          <div>
-            <label class="block text-gray-700 dark:text-gray-300 mb-2">Nama</label>
-            <input type="text" required placeholder="Masukkan nama kamu"
-              class="w-full px-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-purple-500">
-          </div>
-          <div>
-            <label class="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
-            <input type="email" required placeholder="Masukkan email kamu"
-              class="w-full px-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-purple-500">
-          </div>
-          <div>
-            <label class="block text-gray-700 dark:text-gray-300 mb-2">Pesan</label>
-            <textarea rows="4" required placeholder="Tulis pesan kamu di sini..."
-              class="w-full px-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-purple-500"></textarea>
-          </div>
-          <button type="submit"
-            class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
-            Kirim Pesan
-          </button>
-        </form>
-      </div>
+  <section id="contact" class="py-20 bg-gradient-to-br from-purple-100 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-black transition-colors duration-300">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+      <form id="contactForm" class="space-y-4">
+        <input type="text" placeholder="Nama" required class="w-full px-4 py-3 border rounded-lg dark:bg-gray-800 dark:border-gray-700 focus:ring-2 focus:ring-purple-500">
+        <input type="email" placeholder="Email" required class="w-full px-4 py-3 border rounded-lg dark:bg-gray-800 dark:border-gray-700 focus:ring-2 focus:ring-purple-500">
+        <textarea rows="4" placeholder="Pesan..." required class="w-full px-4 py-3 border rounded-lg dark:bg-gray-800 dark:border-gray-700 focus:ring-2 focus:ring-purple-500"></textarea>
+        <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition">Kirim Pesan</button>
+      </form>
     </div>
-  </div>
+  </section>
 
-  <!-- Popup Sukses -->
-  <div id="successPopup" class="fixed inset-0 hidden bg-black/50 flex items-center justify-center z-50">
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 text-center max-w-sm">
-      <h3 class="text-xl font-bold text-green-600 mb-2">✅ Pesan Terkirim!</h3>
-      <p class="text-gray-600 dark:text-gray-300 mb-4">Terima kasih, pesanmu sudah berhasil dikirim.</p>
-      <button type="button" onclick="closePopup()" 
-        class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">Tutup</button>
-    </div>
-  </div>
-</section>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
-<!-- Tambahkan Script AOS & Form -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-
-  const form = document.getElementById("contactForm");
-  const popup = document.getElementById("successPopup");
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault(); // supaya tidak reload
-    popup.classList.remove("hidden");
-  });
-
-  function closePopup() {
-    popup.classList.add("hidden");
-    form.reset(); // reset form setelah sukses
-  }
-</script>
-
+    const toggleDark = document.getElementById("toggleDark");
+    const html = document.documentElement;
+    toggleDark.addEventListener("click", () => {
+      html.classList.toggle("dark");
+    });
+    
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Pesan berhasil dikirim!");
+      form.reset();
+    });
+  </script>
 </body>
 </html>
